@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nc>
+    <fileDesc>
+        <recordTitle>Nintendo DS #1 (Robbie Konijn)</recordTitle>
+        <recordInstitution>Syracuse University</recordInstitution>
+        <authorName>Carpenter, Joel</authorName>
+        <creationDate>December 07, 2025</creationDate>
+    </fileDesc>
+    <archDesc>
+        <ownerName>Konijn, Robbie</ownerName>
+        <itemID ID="nc.rk01.ninds.001" source="nc"></itemID>
+        <itemLocation type="geographicName" termsource="TGN" 						  termsourceID="tgn7006984">Groningen</itemLocation>
+        <itemProvenance>Obtained in 2024 from a friend of Konijn’s mother; the friend found the DS along with some games in her water-damaged basement. The console originally belonged to the friend’s now-adult daughter, who had no interest in keeping it, so it was passed on to Konijn, who was very surprised to start up the console and find that it not only appeared to function normally, but still had battery life even after sitting in a basement for an estimated 15 years.</itemProvenance>
+        <collectTitle>Robbie Konijn’s Nintendo console collection (2006-2025)</collectTitle>
+        <collectID ID="nc.collection.rk01" source="nc"></collectID>
+    </archDesc>
+    <sysDesc>
+        <sysName>Nintendo DS</sysName>
+        <sysLocalID ID="ninds.nc" source="nc"></sysLocalID>
+        <sysDev>Nintendo</sysDev>
+        <sysMfr>Foxconn</sysMfr>
+        <productFamily>Nintendo DS</productFamily>
+        <consoleGen>Seventh Generation</consoleGen>
+        <releaseDateWrap>
+            <releaseDateSet>
+                <releaseDate region="North America">November 21, 2004</releaseDate>
+            </releaseDateSet>
+            <releaseDateSet>
+                <releaseDate region="Japan">December 02, 2004</releaseDate>
+            </releaseDateSet>
+        </releaseDateWrap>
+        <origRetailPrice region="United States">$149.00</origRetailPrice>
+        <prodDateRange earliestDate="2004" latestDate="2014 (latest possible)">
+            <note>End date of manufacture not formally disclosed by Nintendo.</note>
+        </prodDateRange>
+        <consoleType>Handheld</consoleType>
+        <formFactor>Clamshell</formFactor>
+        <consoleDimensions label="Width ; Height ; Depth">148.7 mm (5.85 in) × 84.7 mm (3.33 in) × 28.9 mm (1.14 in)</consoleDimensions>
+        <techSpecsWrap>
+            <cpu>67 MHz ARM946E-S ; 33 MHz ARM7TDMI</cpu>
+            <memory>4 MB RAM</memory>
+            <storage>Cartridge save ; 256 KB flash memory</storage>
+            <displaySpecs>Two 3" TFT LCD screens</displaySpecs>
+            <audio>Stereo audio ; 16 PCM/ADPCM channels</audio>
+            <playableMedia>Game Boy Advance Game Pak</playableMedia>
+            <playableMedia>Nintendo DS Game Card</playableMedia>
+            <connectivity>Wireless network connectivity</connectivity>
+            <backCompSys>Game Boy Advance</backCompSys>
+        </techSpecsWrap>
+    </sysDesc>
+    <itemDesc>
+        <editionDesc>
+            <consColor>Platinum Silver</consColor>
+            <consLang>English</consLang>
+        </editionDesc>
+        <physCond>
+            <consFunction>The console powers on, but displays error message when attempting to run games.</consFunction>
+            <batteryCond>Battery seems functional.</batteryCond>
+            <buttonsCond>D-pad often sticks and the inputs are inconsistent. Joysticks work normally.</buttonsCond>
+            <displayCond>Deep scratches on the bottom screen, sometimes obscuring visibility.</displayCond>
+            <otherCond>Light scratches on the exterior.</otherCond>
+            <otherCond>Appears that some sort of glue or other substance was spilled on the outer casing at some point. Substance has been there long enough that it has started to yellow and deteriorate, and can be peeled away with a fingernail.</otherCond>
+        </physCond>
+        <customizationWrap>
+            <customization>Black wrist strap featuring the Nintendo and Nintendo DS logos</customization>
+            <customization>Faded sticker of a Labrador puppy affixed to the outer shell</customization>
+        </customizationWrap>
+    </itemDesc>
+</nc>
