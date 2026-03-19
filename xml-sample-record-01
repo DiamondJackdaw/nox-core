@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nc>
+    <fileDesc>
+        <recordTitle>Nintendo DS Lite #6 (Robbie Konijn)</recordTitle>
+        <recordInstitution>Syracuse University</recordInstitution>
+        <authorName>Carpenter, Joel</authorName>
+        <creationDate>November 25, 2025</creationDate>
+        <revisionHist>
+            <revision>
+                <revisionAuthor>Carpenter, Joel</revisionAuthor>
+                <revisionDate>December 07, 2025</revisionDate>
+                <note>Added accessory and customization information.</note>
+            </revision>
+        </revisionHist>
+    </fileDesc>
+    <archDesc>
+        <ownerName>Konijn, Robbie</ownerName>
+        <itemID ID="nc.rk01.nindslite.006" source="nc"></itemID>
+        <itemLocation type="geographicName" termsource="TGN" termsourceID="tgn7006984">Groningen</itemLocation>
+        <itemProvenance>This item was acquired new, roughly 2006-2007, when Konijn was a child. The item was briefly lost after being stolen from Konijn while at a TCG tournament in the late 2000s, but was recovered shortly thereafter when Konijn recognized the condition of the screen protector at the local secondhand games store while trying to obtain a replacement. Quote from Konijn: “[T]he people from the shop felt real bad about it and assured us the kids who stole my ds were never welcome there again, and my dad bought my ds back for the same price they'd bought it off of the kids as a gesture of good will.”</itemProvenance>
+        <collectTitle>Robbie Konijn’s Nintendo console collection (2006-2025)</collectTitle>
+        <collectID ID="nc.collection.rk01" source="nc"></collectID>
+    </archDesc>
+    <sysDesc>
+        <sysName>Nintendo DS Lite</sysName>
+        <sysLocalID ID="nindslite.nc" source="nc"></sysLocalID>
+        <sysDev>Nintendo</sysDev>
+        <sysMfr>Foxconn</sysMfr>
+        <productFamily>Nintendo DS</productFamily>
+        <consoleGen>Seventh Generation</consoleGen>
+        <releaseDateWrap>
+            <releaseDateSet>
+                <releaseDate region="North America">June 11, 2006</releaseDate>
+            </releaseDateSet>
+            <releaseDateSet>
+                <releaseDate region="Japan">March 02, 2006</releaseDate>
+            </releaseDateSet>
+        </releaseDateWrap>
+        <origRetailPrice region="United States">$129.00</origRetailPrice>
+        <prodDateRange earliestDate="2006" latestDate="2011 (presumed)">
+            <note>End date of manufacture not formally disclosed by Nintendo.</note>
+        </prodDateRange>
+        <consoleType>Handheld</consoleType>
+        <formFactor>Clamshell</formFactor>
+        <consoleDimensions label="Width ; Height ; Depth">133 mm (5.24 in) ; 73.9 mm (2.91 in) ; 21.5 mm (0.85 in)</consoleDimensions>
+        <techSpecsWrap>
+            <cpu>67 MHz ARM946E-S ; 33 MHz ARM7TDMI</cpu>
+            <memory>4 MB RAM</memory>
+            <storage>Cartridge save ; 256 KB flash memory</storage>
+            <displaySpecs>Two 3.12" TFT LCD screens</displaySpecs>
+            <audio>Stereo audio ; 16 PCM/ADPCM channels</audio>
+            <playableMedia>Game Boy Advance Game Pak</playableMedia>
+            <playableMedia>Nintendo DS Game Card</playableMedia>
+            <connectivity>Wireless network connectivity</connectivity>
+            <backCompSys>Game Boy Advance</backCompSys>
+        </techSpecsWrap>
+    </sysDesc>
+    <itemDesc>
+        <editionDesc>
+            <consColor>Onyx Black</consColor>
+            <consLang>English</consLang>
+        </editionDesc>
+        <physCond>
+            <consFunction>Console powers on and will run games.</consFunction>
+            <batteryCond>Battery is functional.</batteryCond>
+            <buttonsCond>Buttons are functional.</buttonsCond>
+            <displayCond>Deep scratches on the bottom screen, sometimes obscuring visibility.</displayCond>
+            <otherCond>Light scratches on the exterior.</otherCond>
+            <otherCond>One deep scratch across the top surface.</otherCond>
+            <otherCond>Product ID code sticker has been peeled off.</otherCond>
+            <missingComponent>Missing original stylus</missingComponent>
+            <missingComponent>Missing original Game Boy Advance slot insert</missingComponent>
+        </physCond>
+        <customizationWrap>
+            <customization>Replacement Game Boy Advance slot insert (white instead of the original black)</customization>
+            <customization>Pokemon Piplup phone charm attached to console via black wrist strap</customization>
+        </customizationWrap>
+    </itemDesc>
+</nc>
