@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://purl.org/nc/elements/1.0" targetNamespace="http://purl.org/nc/elements/1.0" elementFormDefault="qualified" attributeFormDefault="qualified">
+
+  <!-- Root element: Nox Core -->
+  <xs:element name="nc">
+    <xs:annotation>
+      <xs:documentation>Root element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" ref="fileDesc"/>
+        <xs:element maxOccurs="1" ref="archDesc"/>
+        <xs:element maxOccurs="1" ref="sysDesc"/>
+        <xs:element maxOccurs="1" ref="itemDesc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Wrapper: File Description -->
+  <xs:element name="fileDesc">
+    <xs:annotation>
+      <xs:documentation>A required child element of nc that binds together information describing the metadata record, including its creation and maintenance.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" ref="recordTitle"/>
+        <xs:element maxOccurs="unbounded" ref="recordInstitution"/>
+        <xs:element maxOccurs="unbounded" ref="authorName"/>
+        <xs:element maxOccurs="1" ref="creationDate"/>
+        <xs:element maxOccurs="1" ref="revisionHist"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Elements describing the creation and maintenance of the metadata record. -->
+  <xs:element name="recordTitle" type="xs:string"/>
+  <xs:element name="recordInstitution" type="xs:string"/>
+  <xs:element name="authorName" type="xs:string"/>
+  <xs:element name="creationDate" type="xs:string"/>
+  <xs:element name="revisionHist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="revision"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="revision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="revisionAuthor"/>
+        <xs:element maxOccurs="1" ref="revisionDate"/>
+        <xs:element maxOccurs="unbounded" ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="revisionAuthor" type="xs:string"/>
+  <xs:element name="revisionDate" type="xs:string"/>
+
+  <!-- Wrapper: Archival Description -->
+  <xs:element name="archDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ownerName"/>
+        <xs:element maxOccurs="1" ref="itemID"/>
+        <xs:element maxOccurs="1" ref="itemLocation"/>
+        <xs:element maxOccurs="1" ref="itemProvenance"/>
+        <xs:element maxOccurs="1" ref="collectTitle"/>
+        <xs:element maxOccurs="1" ref="collectID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Elements describing the ownership and provenance of the item, as well as any associated collection information. -->
+  <xs:element name="ownerName" type="xs:string"/>
+  <xs:element name="itemID">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:NCName"/>
+      <xs:attribute name="source" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="itemLocation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="termsource" use="required" type="xs:string"/>
+          <xs:attribute name="termsourceID" use="required" type="xs:string"/>
+          <xs:attribute name="type" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="itemProvenance" type="xs:string"/>
+  <xs:element name="collectTitle" type="xs:string"/>
+  <xs:element name="collectID">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:NCName"/>
+      <xs:attribute name="source" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Wrapper: System Description -->
+  <xs:element name="sysDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" ref="sysName"/>
+        <xs:element maxOccurs="1" ref="sysLocalID"/>
+        <xs:element maxOccurs="unbounded" ref="sysDev"/>
+        <xs:element maxOccurs="unbounded" ref="sysMfr"/>
+        <xs:element maxOccurs="1" ref="productFamily"/>
+        <xs:element maxOccurs="1" ref="consoleGen"/>
+        <xs:element maxOccurs="1" ref="releaseDateWrap"/>
+        <xs:element maxOccurs="unbounded" ref="origRetailPrice"/>
+        <xs:element maxOccurs="1" ref="prodDateRange"/>
+        <xs:element maxOccurs="unbounded" ref="consoleType"/>
+        <xs:element maxOccurs="unbounded" ref="formFactor"/>
+        <xs:element maxOccurs="unbounded" ref="consoleDimensions"/>
+        <xs:element maxOccurs="1" ref="techSpecsWrap"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Expression-level elements describing the item as a product. -->
+  <xs:element name="sysName" type="xs:string"/>
+  <xs:element name="sysLocalID">
+    <xs:complexType>
+      <xs:attribute name="ID" use="required" type="xs:NCName"/>
+      <xs:attribute name="source" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sysDev" type="xs:string"/>
+  <xs:element name="sysMfr" type="xs:string"/>
+  <xs:element name="productFamily" type="xs:string"/>
+  <xs:element name="consoleGen" type="xs:string"/>
+  <xs:element name="releaseDateWrap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="releaseDateSet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="releaseDateSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="releaseDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="releaseDate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="region" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="origRetailPrice">
+    <xs:complexType mixed="true">
+      <xs:attribute name="region" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prodDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="note"/>
+      </xs:sequence>
+      <xs:attribute name="earliestDate" use="optional" type="xs:integer"/>
+      <xs:attribute name="latestDate" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consoleType" type="xs:string"/>
+  <xs:element name="formFactor" type="xs:string"/>
+  <xs:element name="consoleDimensions">
+    <xs:complexType mixed="true">
+      <xs:attribute name="label" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="techSpecsWrap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="cpu"/>
+        <xs:element maxOccurs="unbounded" ref="memory"/>
+        <xs:element maxOccurs="unbounded" ref="storage"/>
+        <xs:element maxOccurs="1" ref="displaySpecs"/>
+        <xs:element maxOccurs="unbounded" ref="graphics"/>
+        <xs:element maxOccurs="unbounded" ref="audio"/>
+        <xs:element maxOccurs="unbounded" ref="playableMedia"/>
+        <xs:element maxOccurs="unbounded" ref="connectivity"/>
+        <xs:element maxOccurs="unbounded" ref="backCompSys"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cpu" type="xs:string"/>
+  <xs:element name="memory" type="xs:string"/>
+  <xs:element name="storage" type="xs:string"/>
+  <xs:element name="displaySpecs" type="xs:string"/>
+  <xs:element name="graphics" type="xs:string"/>
+  <xs:element name="audio" type="xs:string"/>
+  <xs:element name="playableMedia" type="xs:string"/>
+  <xs:element name="connectivity" type="xs:string"/>
+  <xs:element name="backCompSys" type="xs:string"/>
+
+  <!-- Wrapper: Item Description -->
+  <xs:element name="itemDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" ref="editionDesc"/>
+        <xs:element maxOccurs="1" ref="physCond"/>
+        <xs:element maxOccurs="1" ref="customizationWrap"/>
+        <xs:element maxOccurs="1" ref="accessoryWrap"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Sub-Wrapper: Edition Description -->
+  <xs:element name="editionDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="consColor"/>
+        <xs:element maxOccurs="unbounded" ref="consLang"/>
+        <xs:element maxOccurs="unbounded" ref="consEdition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Manifestation-level elements describing the item as a specific edition or variation of the product. -->
+  <xs:element name="consColor" type="xs:string"/>
+  <xs:element name="consLang" type="xs:string"/>
+  <xs:element name="consEdition" type="xs:string"/>
+
+  <!-- Sub-Wrapper: Physical Condition -->
+  <xs:element name="physCond">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" ref="consFunction"/>
+        <xs:element maxOccurs="1" ref="batteryCond"/>
+        <xs:element maxOccurs="1" ref="buttonsCond"/>
+        <xs:element maxOccurs="1" ref="displayCond"/>
+        <xs:element maxOccurs="unbounded" ref="otherCond"/>
+        <xs:element maxOccurs="unbounded" ref="missingComponent"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Item-level elements describing the item as a unique object. -->
+  <xs:element name="consFunction" type="xs:string"/>
+  <xs:element name="batteryCond" type="xs:string"/>
+  <xs:element name="buttonsCond" type="xs:string"/>
+  <xs:element name="displayCond" type="xs:string"/>
+  <xs:element name="otherCond" type="xs:string"/>
+  <xs:element name="missingComponent" type="xs:string"/>
+  <xs:element name="customizationWrap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="customization"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customization" type="xs:string"/>
+  <xs:element name="accessoryWrap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="accessory"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accessory">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Flexible elements which can be utilized throughout the metadata record as needed. -->
+  <xs:element name="note" type="xs:string"/>
+
+</xs:schema>
